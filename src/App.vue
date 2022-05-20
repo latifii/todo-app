@@ -60,9 +60,7 @@ export default {
   components: { BaseHeader, BaseFooter, AddCard, TodoItem },
   data() {
     return {
-      activities: [
-        { id: 1, title: 'آموزش JS', isComplete: false },
-      ],
+      activities: [{ id: 1, title: 'آموزش JS', isComplete: false }],
       activeTab: 'all',
     };
   },
@@ -118,11 +116,11 @@ export default {
 
 <style>
 :root {
-  --ff-sans: "Josefin Sans", sans-serif;
+  --ff-sans: 'Josefin Sans', sans-serif;
   --base-font: 2rem;
   --fw-normal: 400;
   --fw-bold: 700;
-  --img-bg: url("./assets/images/bg-desktop-dark.jpg");
+  --img-bg: url('./assets/images/bg-desktop-dark.jpg');
   --clr-primary: hsl(0, 0%, 98%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-page-bg: hsl(235, 21%, 11%);
@@ -142,7 +140,7 @@ export default {
 /* CHANGE CUSTOM PROPERTIES WHEN LIGHT THEME */
 
 body.light {
-  --img-bg: url("./assets/images/bg-desktop-light.jpg");
+  --img-bg: url('./assets/images/bg-desktop-light.jpg');
   --clr-primary: hsl(243, 12%, 30%);
   --clr-page-bg: hsl(0, 0%, 98%);
   --clr-card-bg: hsl(0, 0%, 100%);
@@ -162,7 +160,6 @@ body.light {
   box-sizing: border-box;
   direction: rtl;
   font-family: 'Markazi Text', serif;
-
 }
 
 html {
@@ -201,7 +198,9 @@ button {
   border: 0;
   background: transparent;
 }
-
+input{
+  font-size: 2rem;
+}
 button {
   display: flex;
   user-select: none;
@@ -238,7 +237,7 @@ header.card {
 
 header.card h1 {
   color: var(--clr-white);
-  
+
   font-weight: 700;
   font-size: calc(var(--base-font) * 2);
 }
@@ -274,7 +273,7 @@ header.card h1 {
 /* CHECKED CARD */
 
 .card .cb-container .cb-input:checked + .check {
-  background: url("./assets/images/icon-check.svg"),
+  background: url('./assets/images/icon-check.svg'),
     linear-gradient(45deg, var(--clr-green), var(--clr-pink));
   background-repeat: no-repeat;
   background-position: center;
@@ -353,7 +352,7 @@ body.light .add .txt-container .txt-input {
 .item {
   flex: 1;
   color: var(--clr-gb-2);
- 
+  font-size: 2rem;
 }
 
 .item:hover {
@@ -439,7 +438,6 @@ footer {
   color: var(--clr-gb-5);
 }
 
-
 /* FILTER TODOS */
 
 .todos.active .card.checked,
@@ -465,8 +463,6 @@ footer {
   border-top: 0.2rem solid var(--clr-gb-6);
 }
 
-
-
 @media (max-width: 599px) {
   .stat {
     grid-template-columns: 1fr 1fr;
@@ -480,7 +476,7 @@ footer {
     position: relative;
   }
   .stat .filter::before {
-    content: "";
+    content: '';
     position: absolute;
     width: calc(100% + 4rem);
     height: 1rem;
@@ -497,5 +493,4 @@ footer {
     font-size: calc(var(--base-font) * 1.5);
   }
 }
-
 </style>
